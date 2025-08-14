@@ -1,0 +1,1 @@
+This mission requires building a program that takes a JSON object containing a code snippet and a list of critical review comments and uses generative AI to rephrase these comments into a comprehensive, educational, and empathetic markdown report. The goal is to transform blunt feedback into constructive guidance, improving both code quality and team morale.
