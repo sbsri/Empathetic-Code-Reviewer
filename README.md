@@ -35,7 +35,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/your-username/Empathetic-Code-Reviewer.git
+git clone https://github.com/sbsri/Empathetic-Code-Reviewer.git
 cd Empathetic-Code-Reviewer
 Install dependencies:
 (If your project uses any external libraries, list them here. For a simple Python script using standard libraries, this step may not be needed.)
@@ -47,7 +47,7 @@ Configure API Key:
 (If you used an API, instruct the user on how to set up their API key.)
 Create a file named .env and add your API key:
 
-API_KEY="your_api_key_here"
+API_KEY=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
 Run the program:
 Execute the main Python script. The output will be printed directly to the console.
 
