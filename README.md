@@ -1,36 +1,32 @@
 **Empathetic Code Reviewer** 🤖✨
 Tagline: Transforming Critical Feedback into Constructive Growth.
-
 **The Problem**
-In software development, code reviews are vital for quality and knowledge sharing. However, they can often be a source of tension. Direct, blunt comments can feel discouraging, especially for junior developers, leading to a communication gap that can slow down learning and harm team morale. Our mission is to bridge this gap by rephrasing harsh feedback into supportive, educational guidance.
+Code reviews are a vital part of software development, but they often become a source of friction. Blunt or impersonal feedback can be discouraging, especially for junior developers. Our mission is to solve this by creating an AI that translates raw critique into supportive, educational guidance, fostering a positive and productive team environment.
 
-**Our Solution**
-Our program takes a raw, critical code review comment and uses a generative AI model to rewrite it. The AI acts as a patient mentor, providing feedback that is empathetic, constructive, and educational. The output is a well-formatted Markdown report that explains not just what to change, but also why the change is important, empowering developers to grow.
+**Our Approach**
+Our solution uses a generative AI model to rephrase critical code review comments. Instead of simply pointing out errors, our AI acts as a patient mentor, providing feedback that is empathetic and educational. The program processes a JSON input containing a code snippet and a list of comments, then generates a well-structured Markdown report.
 
-**Key features include:**
-
-Positive Rephrasing: Gentle and encouraging feedback.
-
-The 'Why': Clear explanations of underlying software principles.
-
-Suggested Improvement: Concrete code examples demonstrating the fix.
-
-Holistic Summary: A concluding paragraph that summarizes the feedback and encourages the developer.
-
-Architecture and Technologies
-Our solution is built using Python, and its core logic relies on a generative AI model.
-
+The report includes:
+Positive Rephrasing: An encouraging version of the feedback.
+The 'Why': A clear explanation of the underlying software principle.
+Suggested Improvement: A concrete code example demonstrating the fix.
+Holistic Summary: A concluding paragraph that ties the feedback together in an encouraging way.
+Technologies Used
 Programming Language: Python
 
-AI Model: Gemini, Chat GPT
+AI Model: We used the Groq API to access an open-source model (e.g., Llama 3) for fast and efficient inference.  We chose this platform for its high performance and ease of use, which was ideal for the hackathon's time constraints. (Alternatively, if you used a local LLM, you would state: "We used a local LLM, [mention the model name, e.g., Llama 2], which allowed for greater privacy and avoided external API dependencies.")
 
-Libraries: The program uses standard Python libraries like json for input parsing. An API client library (e.g., requests) is used to communicate with the generative AI service.
+Libraries: The program relies on the json library for data processing and the requests library to make API calls to Groq.
 
-Output: The final output is a single, well-formatted Markdown string.
+**How to Run and Test the Application**
+Follow these steps to set up and test the application on your local machine.
 
-**How to Get Started**
-Follow these steps to set up and run the program locally:
+Prerequisites
+Python 3.7+
 
+Groq API Key: You'll need a Groq API key. You can get one by signing up for free at https://groq.com/.
+
+Setup Instructions
 Clone the repository:
 
 Bash
@@ -38,32 +34,28 @@ Bash
 git clone https://github.com/sbsri/Empathetic-Code-Reviewer.git
 cd Empathetic-Code-Reviewer
 Install dependencies:
-(If your project uses any external libraries, list them here. For a simple Python script using standard libraries, this step may not be needed.)
 
 Bash
 
 pip install -r requirements.txt
-Configure API Key:
-(If you used an API, instruct the user on how to set up their API key.)
-Create a file named .env and add your API key:
+Set up your API Key:
+Create a file named .env in the project's root directory and add your Groq API key:
 
-API_KEY="your API key"
-Run the program:
-Execute the main Python script. The output will be printed directly to the console.
+GROQ_API_KEY="your_groq_api_key_here"
+Running the Application
+To run the program and see the output, execute the main script from your terminal:
 
 Bash
 
 python main.py
-You can also redirect the output to a file:
+The script will process the hard-coded JSON input and print the final, formatted Markdown report to your console.
 
-Bash
+Testing the Application
+You can easily test the application with different inputs by modifying the input.json file in the project. Simply change the code_snippet and review_comments fields to your desired values, save the file, and re-run the program. The AI will generate a new report based on your new input.
 
-python main.py > report.md
 Known Limitations and Future Improvements
-API Latency: Since the solution relies on an external API, response times can vary.
+AI Context: The current prompt focuses on single comments. A future iteration could analyze the entire code file to provide more holistic and context-aware feedback.
 
-Context Window: The current implementation processes comments one by one. A more advanced version could consider the entire file's context for more nuanced feedback.
+Performance: While Groq is fast, processing very large numbers of comments could still introduce latency. This could be optimized through parallel processing.
 
-Code Language: The model is currently optimized for Python code. It could be expanded to support other languages by adjusting the prompt.
-
-Code Execution: The program does not actually execute the code, so it cannot catch runtime errors or performance issues that aren't syntactical. A future version could integrate with a static analysis tool.
+Integration: The tool is currently a standalone script. A more practical version would be integrated into a Continuous Integration (CI) pipeline or as a GitHub Action to automate the review process.
