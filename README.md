@@ -1,13 +1,13 @@
-Empathetic Code Reviewer 🤖✨
+**Empathetic Code Reviewer** 🤖✨
 Tagline: Transforming Critical Feedback into Constructive Growth.
 
-The Problem
+**The Problem**
 In software development, code reviews are vital for quality and knowledge sharing. However, they can often be a source of tension. Direct, blunt comments can feel discouraging, especially for junior developers, leading to a communication gap that can slow down learning and harm team morale. Our mission is to bridge this gap by rephrasing harsh feedback into supportive, educational guidance.
 
-Our Solution
+**Our Solution**
 Our program takes a raw, critical code review comment and uses a generative AI model to rewrite it. The AI acts as a patient mentor, providing feedback that is empathetic, constructive, and educational. The output is a well-formatted Markdown report that explains not just what to change, but also why the change is important, empowering developers to grow.
 
-Key features include:
+**Key features include:**
 
 Positive Rephrasing: Gentle and encouraging feedback.
 
@@ -28,7 +28,7 @@ Libraries: The program uses standard Python libraries like json for input parsin
 
 Output: The final output is a single, well-formatted Markdown string.
 
-How to Get Started
+**How to Get Started**
 Follow these steps to set up and run the program locally:
 
 Clone the repository:
@@ -47,7 +47,7 @@ Configure API Key:
 (If you used an API, instruct the user on how to set up their API key.)
 Create a file named .env and add your API key:
 
-API_KEY=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
+API_KEY="your API key"
 Run the program:
 Execute the main Python script. The output will be printed directly to the console.
 
