@@ -1,0 +1,19 @@
+The mission can be broken down into the following logical steps:
+
+Input Parsing: The program must first parse the provided JSON input. This involves extracting the code_snippet and the review_comments list.
+
+Iterative Processing: The program needs to iterate through each comment in the review_comments list.
+
+Prompt Engineering: For each comment, a detailed prompt must be crafted for the Generative AI model. This is the core of the mission. The prompt should instruct the AI to act as an empathetic and knowledgeable senior developer. It should provide the original code_snippet and the specific review_comment, and ask the AI to generate three specific outputs:
+
+A positive rephrasing of the comment.
+
+An explanation of "The Why" behind the suggestion.
+
+A suggested improvement with a code example.
+
+Generative AI Interaction: The program sends the crafted prompt to the Generative AI model (e.g., using an API).
+
+Output Generation and Formatting: The AI's response is then parsed. The program structures this information into a well-formatted markdown report, as specified in the prompt. This includes using headings, bullet points, and code blocks for the suggested improvement.
+
+Holistic Summary (Optional but Recommended): A final, encouraging summary can be added to the end of the report to tie all the feedback together. This adds a nice finishing touch.
